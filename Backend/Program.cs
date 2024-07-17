@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddControllers();
+
 DotEnv.Load();
 builder.Configuration.AddEnvironmentVariables();
 string? connectionString = Environment.GetEnvironmentVariable("connectionString");
@@ -27,5 +29,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.MapControllers();
 app.Run();
