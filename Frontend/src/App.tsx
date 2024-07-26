@@ -2,8 +2,16 @@
 // All packages except `@mantine/hooks` require styles imports
 import "@mantine/core/styles.css";
 
-import { MantineProvider } from "@mantine/core";
-
+import { createTheme, MantineProvider } from "@mantine/core";
+import { Router } from "./Router";
+const theme = createTheme({
+  fontFamily: "Open Sans, sans-serif",
+  primaryColor: "cyan",
+});
 export default function App() {
-  return <MantineProvider></MantineProvider>;
+  return (
+    <MantineProvider theme={theme}>
+      <Router />
+    </MantineProvider>
+  );
 }
