@@ -4,6 +4,6 @@ namespace Backend.Context
 {
     public class ApplicationDBContext : DbContext {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options) {}
-        public DbSet<Session> Sessions {get; set;}
+        public DbSet<Session> Session {get; set;}
     }
 }
