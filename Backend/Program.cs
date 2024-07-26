@@ -13,11 +13,11 @@ builder.Services.AddControllers();
 
 DotEnv.Load();
 builder.Configuration.AddEnvironmentVariables();
-string? connectionString = Environment.GetEnvironmentVariable("connectionString");
-if (connectionString == null) {
-    throw new ArgumentNullException(connectionString, "Connection string is null");
+string? connection_string = Environment.GetEnvironmentVariable("connection_string");
+if (connection_string == null) {
+    throw new ArgumentNullException(nameof(connection_string), "is null");
 }
-builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(connection_string));
 
 var app = builder.Build();
 
