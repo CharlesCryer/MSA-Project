@@ -1,4 +1,4 @@
-import { AppShell, Burger } from "@mantine/core";
+import { AppShell, Burger, Flex } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
@@ -14,11 +14,12 @@ export default function App() {
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
-      padding="md"
     >
       <AppShell.Header>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="lg" />
-        <Header />
+        <Flex>
+          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="lg" />
+          <Header />
+        </Flex>
       </AppShell.Header>
 
       <AppShell.Navbar p="md">

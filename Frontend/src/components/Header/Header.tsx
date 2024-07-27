@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <h2 className="logo-header">StudyTracker</h2>
-      <IconSchool size={40} title="hello" stroke={2} />
+      <IconSchool size={40} stroke={2} />
     </>
   );
 };
