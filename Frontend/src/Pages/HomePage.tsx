@@ -1,7 +1,8 @@
 import { AppShell, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Navbar from "../components/Navbar/Navbar";
-
+import Header from "../components/Header/Header";
+import "./HomePage.css";
 export default function App() {
   const [opened, { toggle }] = useDisclosure();
 
@@ -16,8 +17,8 @@ export default function App() {
       padding="md"
     >
       <AppShell.Header>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <div>Logo</div>
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="lg" />
+        <Header />
       </AppShell.Header>
 
       <AppShell.Navbar p="md">
