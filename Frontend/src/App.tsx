@@ -3,7 +3,7 @@
 import "@mantine/core/styles.css";
 import "./index.css";
 import { createTheme, MantineProvider } from "@mantine/core";
-import { Router } from "./Router";
+import Router from "./Router";
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
   primaryColor: "cyan",
