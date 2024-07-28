@@ -9,10 +9,10 @@ import {
 const Navbar = () => {
   return (
     <div className="navbar">
-      <NavbarButton text="Summary" icon={<IconGraph />} />
-      <NavbarButton text="Subjects" icon={<IconPencil />} />
-      <NavbarButton text="Settings" icon={<IconSettings />} />
-      <NavbarButton text="Sign out" icon={<IconUser />} />
+      <NavbarButton text="Summary" icon={<IconGraph />} link="/summary" />
+      <NavbarButton text="Subjects" icon={<IconPencil />} link="/subjects" />
+      <NavbarButton text="Settings" icon={<IconSettings />} link="/settings" />
+      <NavbarButton text="Sign out" icon={<IconUser />} link="/signout" />
     </div>
   );
 };
